@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lzw-FX-61E">
+                                <rect key="frame" x="16" y="163" width="361" height="150"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="361" id="A8P-mH-GfG"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="150" id="Tpj-Ts-juK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="2Yc-hT-ruE">
+                                <rect key="frame" x="16" y="313" width="361" height="550"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="tbT-ou-7uG">
+                                        <rect key="frame" x="0.0" y="0.0" width="361" height="98"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N96-W3-zwh">
+                                                <rect key="frame" x="0.0" y="0.0" width="79" height="98"/>
+                                                <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="AC">
+                                                    <fontDescription key="titleFontDescription" name="AppleSymbols" family="Apple Symbols" pointSize="50"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="cleanAll:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T3m-uZ-AL3"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lKC-CN-LJu">
+                                                <rect key="frame" x="94" y="0.0" width="79" height="98"/>
+                                                <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="⁺∕₋">
+                                                    <fontDescription key="titleFontDescription" name="AmericanTypewriter-CondensedBold" family="American Typewriter" pointSize="50"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qXv-wh-a7F" userLabel="division">
+                                                <rect key="frame" x="188" y="0.0" width="79" height="98"/>
+                                                <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="%">
+                                                    <fontDescription key="titleFontDescription" name="AppleSymbols" family="Apple Symbols" pointSize="60"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1v2-gB-Vpr">
+                                                <rect key="frame" x="282" y="0.0" width="79" height="98"/>
+                                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="÷">
+                                                    <fontDescription key="titleFontDescription" name="AppleSymbols" family="Apple Symbols" pointSize="70"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="divOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oAv-NU-LEi"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="2HM-fK-DPR">
+                                        <rect key="frame" x="0.0" y="113" width="361" height="98"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oJf-Sh-AHw">
+                                                <rect key="frame" x="0.0" y="0.0" width="79" height="98"/>
+                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="7">
+                                                    <fontDescription key="titleFontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="60"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="sendValue:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KMv-En-jfD"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l9w-Db-8bX">
+                                                <rect key="frame" x="94" y="0.0" width="79" height="98"/>
+                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="8">
+                                                    <fontDescription key="titleFontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="60"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="sendValue:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6ke-51-Paw"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i2Y-CD-TEO">
+                                                <rect key="frame" x="188" y="0.0" width="79" height="98"/>
+                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="9">
+                                                    <fontDescription key="titleFontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="60"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="sendValue:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gJP-MT-xhj"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aiT-eW-Ail">
+                                                <rect key="frame" x="282" y="0.0" width="79" height="98"/>
+                                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="×">
+                                                    <fontDescription key="titleFontDescription" name="AppleSymbols" family="Apple Symbols" pointSize="70"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="multiOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vGh-rt-IXa"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="tsJ-j5-2hj">
+                                        <rect key="frame" x="0.0" y="226" width="361" height="98"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ee-Qo-fb3">
+                                                <rect key="frame" x="0.0" y="0.0" width="79" height="98"/>
+                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="4">
+                                                    <fontDescription key="titleFontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="60"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="sendValue:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NvE-hl-iNG"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="piK-od-N0A">
+                                                <rect key="frame" x="94" y="0.0" width="79" height="98"/>
+                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="5">
+                                                    <fontDescription key="titleFontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="60"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="sendValue:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hYH-WX-0C7"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CCN-W0-yPi">
+                                                <rect key="frame" x="188" y="0.0" width="79" height="98"/>
+                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="6">
+                                                    <fontDescription key="titleFontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="60"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="sendValue:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S9Q-Kn-m0z"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dQG-4I-DgM">
+                                                <rect key="frame" x="282" y="0.0" width="79" height="98"/>
+                                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="−">
+                                                    <fontDescription key="titleFontDescription" name="AppleSymbols" family="Apple Symbols" pointSize="70"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="subOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="69L-s0-g7u"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="xkj-q6-Y5l">
+                                        <rect key="frame" x="0.0" y="339" width="361" height="98"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NG1-q3-Rw6" userLabel="oneButton">
+                                                <rect key="frame" x="0.0" y="0.0" width="79" height="98"/>
+                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="1">
+                                                    <fontDescription key="titleFontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="60"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="sendValue:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dc5-y6-9WJ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TGV-EE-U83">
+                                                <rect key="frame" x="94" y="0.0" width="79" height="98"/>
+                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="2">
+                                                    <fontDescription key="titleFontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="60"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="sendValue:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BH1-Re-DQZ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sc5-9g-hZ4" userLabel="three">
+                                                <rect key="frame" x="188" y="0.0" width="79" height="98"/>
+                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="3">
+                                                    <fontDescription key="titleFontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="60"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="sendValue:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KLV-Ac-zei"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FWx-vj-tZ1">
+                                                <rect key="frame" x="282" y="0.0" width="79" height="98"/>
+                                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="+">
+                                                    <fontDescription key="titleFontDescription" name="AppleSymbols" family="Apple Symbols" pointSize="70"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="sumOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lFo-fW-axm"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="l7K-e8-HxO">
+                                        <rect key="frame" x="0.0" y="452" width="361" height="98"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fhs-D5-HLe">
+                                                <rect key="frame" x="0.0" y="0.0" width="157" height="98"/>
+                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="0">
+                                                    <fontDescription key="titleFontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="60"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="sendValue:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wkw-gx-3zu"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GPc-Qa-Yc1">
+                                                <rect key="frame" x="172" y="0.0" width="87" height="98"/>
+                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="87" id="B5U-nf-IuQ"/>
+                                                    <constraint firstAttribute="height" constant="103" id="JL7-Od-py0"/>
+                                                    <constraint firstAttribute="width" constant="87" id="wLs-lh-OIv"/>
+                                                </constraints>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title=",">
+                                                    <fontDescription key="titleFontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="60"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="comma:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WYw-V3-HTI"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="852-Tl-ZEK">
+                                                <rect key="frame" x="274" y="0.0" width="87" height="98"/>
+                                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="87" id="0W1-ti-huA"/>
+                                                </constraints>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="=">
+                                                    <fontDescription key="titleFontDescription" name="AppleSymbols" family="Apple Symbols" pointSize="70"/>
+                                                </buttonConfiguration>
+                                                <variation key="heightClass=regular-widthClass=compact" layoutMarginsFollowReadableWidth="NO"/>
+                                                <connections>
+                                                    <action selector="resultAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Uch-7y-3f8"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="2Yc-hT-ruE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="2Ua-Tf-zvV"/>
+                            <constraint firstItem="lzw-FX-61E" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="104" id="7kZ-SB-CWr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lzw-FX-61E" secondAttribute="trailing" constant="16" id="JaP-6w-lGd"/>
+                            <constraint firstItem="2Yc-hT-ruE" firstAttribute="top" secondItem="lzw-FX-61E" secondAttribute="bottom" id="RtO-7a-biB"/>
+                            <constraint firstItem="2Yc-hT-ruE" firstAttribute="top" secondItem="lzw-FX-61E" secondAttribute="bottom" id="fXF-s4-Usl"/>
+                            <constraint firstItem="2Yc-hT-ruE" firstAttribute="top" secondItem="lzw-FX-61E" secondAttribute="bottom" id="n8q-Vq-t8p"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2Yc-hT-ruE" secondAttribute="trailing" constant="16" id="qFk-Gq-NNg"/>
+                            <constraint firstItem="2Yc-hT-ruE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="tuM-7e-w4f"/>
+                            <constraint firstAttribute="bottom" secondItem="2Yc-hT-ruE" secondAttribute="bottom" constant="10" id="yMB-LN-TXp"/>
+                            <constraint firstItem="lzw-FX-61E" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="yvx-g1-X05"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="resultText" destination="lzw-FX-61E" id="mH9-WJ-act"/>
+                        <outletCollection property="buttons" destination="TGV-EE-U83" collectionClass="NSMutableArray" id="LEF-ZC-Wge"/>
+                        <outletCollection property="buttons" destination="6Ee-Qo-fb3" collectionClass="NSMutableArray" id="wyB-P0-IUq"/>
+                        <outletCollection property="buttons" destination="piK-od-N0A" collectionClass="NSMutableArray" id="h8w-Id-iaP"/>
+                        <outletCollection property="buttons" destination="CCN-W0-yPi" collectionClass="NSMutableArray" id="Tf6-8W-3r2"/>
+                        <outletCollection property="buttons" destination="oJf-Sh-AHw" collectionClass="NSMutableArray" id="GpN-aS-l5L"/>
+                        <outletCollection property="buttons" destination="l9w-Db-8bX" collectionClass="NSMutableArray" id="PoX-xr-3av"/>
+                        <outletCollection property="buttons" destination="i2Y-CD-TEO" collectionClass="NSMutableArray" id="XGt-if-8sI"/>
+                        <outletCollection property="buttons" destination="fhs-D5-HLe" collectionClass="NSMutableArray" id="IC5-DU-ymz"/>
+                        <outletCollection property="buttons" destination="NG1-q3-Rw6" collectionClass="NSMutableArray" id="xKl-O3-XlJ"/>
+                        <outletCollection property="buttons" destination="N96-W3-zwh" collectionClass="NSMutableArray" id="gUq-CZ-cJ5"/>
+                        <outletCollection property="buttons" destination="lKC-CN-LJu" collectionClass="NSMutableArray" id="53r-4H-Tbz"/>
+                        <outletCollection property="buttons" destination="qXv-wh-a7F" collectionClass="NSMutableArray" id="g6K-mp-grW"/>
+                        <outletCollection property="buttons" destination="1v2-gB-Vpr" collectionClass="NSMutableArray" id="9fw-uu-KA9"/>
+                        <outletCollection property="buttons" destination="aiT-eW-Ail" collectionClass="NSMutableArray" id="ikf-xg-FXd"/>
+                        <outletCollection property="buttons" destination="dQG-4I-DgM" collectionClass="NSMutableArray" id="o3W-x4-j2I"/>
+                        <outletCollection property="buttons" destination="FWx-vj-tZ1" collectionClass="NSMutableArray" id="PeH-AU-72q"/>
+                        <outletCollection property="buttons" destination="GPc-Qa-Yc1" collectionClass="NSMutableArray" id="Zzs-ga-8Z1"/>
+                        <outletCollection property="buttons" destination="852-Tl-ZEK" collectionClass="NSMutableArray" id="e36-rj-pAU"/>
+                        <outletCollection property="buttons" destination="Sc5-9g-hZ4" collectionClass="NSMutableArray" id="Khd-l2-uRC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="23.664122137404579" y="-9.1549295774647899"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
